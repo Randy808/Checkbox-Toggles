@@ -1,0 +1,71 @@
+@keyframes enlarge {
+	0% {
+		width: 0px;
+		height: 0px;
+		left: 10px;
+		top: 10px;
+	}
+	50% {
+		width: 25px;
+		height: 25px;
+		left: -2.5px;
+		top: -2.5px;
+	}
+}
+
+@-webkit-keyframes enlarge{
+	0% {
+		width: 0px;
+		height: 0px;
+		left: 10px;
+		top: 10px;
+	}
+	50% {
+		width: 25px;
+		height: 25px;
+		left: -2.5px;
+		top: -2.5px;
+	}
+}
+
+
+.heart-in {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0px;
+	top: -1px; /*Idk, this just works*/
+	fill: red;
+	opacity: 0;
+}
+
+.toggle-heart{
+	position: absolute;
+	left:-100vw;
+}
+
+
+[class='toggle-heart']:checked + div label .heart-in {
+	color: #e2264d;
+	opacity: 1;
+	-webkit-animation: enlarge .5s;
+	/* Safari 4.0 - 8.0*/
+	animation: enlarge .5s;
+}
+
+.heart {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 20px;
+	fill: 0px;
+	stroke: red;
+	fill-opacity: 0;
+}
+
+.heart-ctn {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+

@@ -1,0 +1,28 @@
+<!-- 
+Although the componentimport statements only work in newer browsers
+check to see if your browser is supported: http://caniuse.com/#feat=imports 
+-->
+
+<html>
+	<head>
+	  <link rel="import" href="./heart-toggle.html"> 
+	  <!-- 
+	  HTML imports can only be made when hosting on a server
+	  This is because the file system will consider it as cors/cross-origin request
+
+	  If you have python and a workable terminal, you can whip up
+	  a simple http server by:
+	  	1.) Directing to the project folder in your terminal
+	  	2.) Typing 'python -m SimpleHTTPServer 8000'
+	  -->
+	</head>
+	<body>
+		<script>
+		    var link = document.querySelector('link[rel="import"]');
+		    var content = link.import;
+		    debugger;
+
+		    document.body.appendChild(content.cloneNode(true));
+		 </script>
+	</body>
+</html>
